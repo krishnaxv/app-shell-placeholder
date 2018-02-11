@@ -1,0 +1,30 @@
+{
+  "name": "content-shell",
+  "version": "0.1.0",
+  "description": "Shell for the content.",
+  "main": "dist/content-shell.cjs.js",
+  "module": "dist/content-shell.esm.js",
+  "browser": "dist/content-shell.umd.js",
+  "license": "MIT",
+  "files": ["dist"],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-react": "^6.24.1",
+    "prettier": "^1.10.2",
+    "react-styleguidist": "^6.2.3",
+    "rollup": "^0.55.5",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-uglify": "^3.0.0",
+    "webpack": "^3.11.0"
+  },
+  "scripts": {
+    "dist": "rollup -c",
+    "prettier": "prettier --write 'src/**/*.js'",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
+  }
+}
