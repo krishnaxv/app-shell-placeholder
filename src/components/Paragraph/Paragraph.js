@@ -1,21 +1,55 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
-import { map, random, times } from 'lodash';
+import { chain, random, times } from 'lodash';
 
+// Primitive building block for Paragraph
 import Rectangle from '../Rectangle';
 
+// Paragraph wrapper
 const Wrapper = styled.div`
   > div {
     margin-bottom: 4px;
   }
 `;
 
-const Paragraph = props => (
-  <Wrapper>
-    {map(times(10, () => random(90, 100)), (item, index) => (
-      <Rectangle key={index} width={item} unit="%" />
-    ))}
-  </Wrapper>
-);
+/**
+ * Paragraph is a *derived* component of content shell.
+ * @class Paragraph
+ * @extends {Component}
+ */
+class Paragraph extends Component {
+  static propTypes = {
+    /** Background color of paragraph's row. */
+    backgroundColor: PropTypes.string,
+    /** Color stop value of linear gradient. */
+    colorStop: PropTypes.string,
+    /** Height of paragraph's row. */
+    height: PropTypes.string,
+    /** Row count of paragraph. */
+    row: PropTypes.number
+  };
+
+  static defaultProps = {
+    backgroundColor: '#eee',
+    colorStop: '#ddd',
+    height: '14px',
+    row: 10
+  };
+
+  render() {
+    const { row, ...rest } = this.props;
+
+    return (
+      <Wrapper>
+        {chain(times(row, () => random(90, 100)))
+          .map((item, index) => (
+            <Rectangle key={index} width={`${item}%`} {...rest} />
+          ))
+          .value()}
+      </Wrapper>
+    );
+  }
+}
 
 export default Paragraph;
