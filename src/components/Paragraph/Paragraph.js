@@ -8,6 +8,8 @@ import Rectangle from '../Rectangle';
 
 // Paragraph wrapper
 const Wrapper = styled.div`
+  width: 100%;
+
   > div {
     margin-bottom: 4px;
   }

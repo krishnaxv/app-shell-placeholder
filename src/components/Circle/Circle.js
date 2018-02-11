@@ -36,7 +36,7 @@ class Circle extends Component {
     /** Color stop value of linear gradient. */
     colorStop: PropTypes.string,
     /** Radius of circle (in px). */
-    radius: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+    radius: PropTypes.number
   };
 
   static defaultProps = {
