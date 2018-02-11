@@ -1,28 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
-const LENGTH = 64;
-
+// Animation
 const flash = keyframes`
   0% {
     background-position: 20% 0
   }
-
   100% {
     background-position: -100% 0
   }
 `;
 
+// Square wrapper
 const Wrapper = styled.div`
-  width: ${props => props.length || LENGTH}px;
-  min-width: ${props => props.length || LENGTH}px;
-  height: ${props => props.length || LENGTH}px;
-  background: #eee;
-  background: linear-gradient(to right, #eee 8%, #ddd 32%, #eee 48%);
+  width: ${props => props.length}px;
+  min-width: ${props => props.length}px;
+  height: ${props => props.length}px;
+  background: ${({ backgroundColor, colorStop }) =>
+    `linear-gradient(to right, ${backgroundColor} 8%, ${colorStop} 32%, ${backgroundColor} 48%)`};
   background-size: 1000% 100%;
   animation: 1s linear infinite forwards ${flash};
 `;
 
-const Square = props => <Wrapper {...props} />;
+/**
+ * Square is a *primitive* component of content shell.
+ * @class Square
+ * @extends {Component}
+ */
+class Square extends Component {
+  static propTypes = {
+    /** Background color of circle. */
+    backgroundColor: PropTypes.string,
+    /** Color stop value of linear gradient. */
+    colorStop: PropTypes.string,
+    /** Radius of circle. */
+    length: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  };
+
+  static defaultProps = {
+    backgroundColor: '#eee',
+    colorStop: '#ddd',
+    length: 64
+  };
+
+  render() {
+    return <Wrapper {...this.props} />;
+  }
+}
 
 export default Square;
