@@ -6,30 +6,35 @@ import uglify from 'rollup-plugin-uglify';
 
 import pkg from './package.json';
 
+// Globals
+const globals = {
+  react: 'React',
+  'prop-types': 'PropTypes',
+  'styled-components': 'styled',
+  lodash: 'lodash'
+};
+
+// External
+const external = ['react', 'prop-types', 'styled-components', 'lodash'];
+
 const config = {
   input: 'src/index.js',
   output: [
     {
       file: pkg.main,
       format: 'cjs',
-      globals: {
-        react: 'React'
-      }
+      globals
     },
     {
       file: pkg.module,
       format: 'es',
-      globals: {
-        react: 'React'
-      }
+      globals
     },
     {
       file: pkg.browser,
       format: 'umd',
       name: 'content-shell',
-      globals: {
-        react: 'React'
-      }
+      globals
     }
   ],
   plugins: [
@@ -40,7 +45,7 @@ const config = {
     }),
     process.env.NODE_ENV === 'production' && uglify()
   ],
-  external: ['react', 'styled-components']
+  external
 };
 
 export default config;

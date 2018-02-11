@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Paragraph } from '../../';
+import Paragraph from '../Paragraph';
 import photoIcon from '../../assets/images/ic_photo_black_24px.svg';
 
 const Wrapper = styled.div`

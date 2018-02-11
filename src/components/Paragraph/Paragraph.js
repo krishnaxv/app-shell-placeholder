@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { map, random, times } from 'lodash';
 
-import { Rectangle } from '../../';
+import Rectangle from '../Rectangle';
 
 const Wrapper = styled.div`
   > div {
