@@ -30,11 +30,11 @@ const Wrapper = styled.div`
  */
 class Square extends Component {
   static propTypes = {
-    /** Background color of circle. */
+    /** Background color of square. */
     backgroundColor: PropTypes.string,
     /** Color stop value of linear gradient. */
     colorStop: PropTypes.string,
-    /** Radius of circle. */
+    /** Length of side of square. */
     length: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
 
