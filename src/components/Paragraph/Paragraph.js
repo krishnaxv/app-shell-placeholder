@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import { chain, random, times } from 'lodash';
 
 // Primitive building block for Paragraph
-import Rectangle from '../Rectangle';
+import Text from '../Text';
 
 // Paragraph wrapper
 const Wrapper = styled.div`
@@ -46,7 +46,7 @@ class Paragraph extends Component {
       <Wrapper>
         {chain(times(row, () => random(90, 100)))
           .map((item, index) => (
-            <Rectangle key={index} width={`${item}%`} {...rest} />
+            <Text key={index} width={`${item}%`} {...rest} />
           ))
           .value()}
       </Wrapper>
