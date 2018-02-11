@@ -10,6 +10,10 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               babelrc: false,
+              plugins: [
+                'transform-object-rest-spread',
+                'transform-class-properties'
+              ],
               presets: ['env', 'react']
             }
           }
