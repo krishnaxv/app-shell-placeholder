@@ -34,7 +34,7 @@ class Square extends Component {
     backgroundColor: PropTypes.string,
     /** Color stop value of linear gradient. */
     colorStop: PropTypes.string,
-    /** Length of side of square. */
+    /** Length of side of square (in px). */
     length: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   };
 
