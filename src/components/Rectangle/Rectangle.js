@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 `;
 
 /**
- * Rectangle is a *primitive* component of content shell.
+ * Rectangle is a *primitive* component of app shell placeholder.
  * @class Rectangle
  * @extends {Component}
  */

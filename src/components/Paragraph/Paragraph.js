@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `;
 
 /**
- * Paragraph is a *derived* component of content shell.
+ * Paragraph is a *derived* component of app shell placeholder.
  * @class Paragraph
  * @extends {Component}
  */

@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 `;
 
 /**
- * Square is a *primitive* component of content shell.
+ * Square is a *primitive* component of app shell placeholder.
  * @class Square
  * @extends {Component}
  */

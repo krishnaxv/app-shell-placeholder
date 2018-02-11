@@ -1,5 +1,5 @@
 ```jsx static
-import { Circle } from 'content-shell';
+import { Circle } from 'app-shell-placeholder';
 ```
 
 Basic usage.

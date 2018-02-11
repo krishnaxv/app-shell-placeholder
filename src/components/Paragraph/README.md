@@ -1,5 +1,5 @@
 ```jsx static
-import { Paragraph } from 'content-shell';
+import { Paragraph } from 'app-shell-placeholder';
 ```
 
 Basic usage.

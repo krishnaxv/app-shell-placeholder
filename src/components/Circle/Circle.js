@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 `;
 
 /**
- * Circle is a *primitive* component of content shell.
+ * Circle is a *primitive* component of app shell placeholder.
  * @class Circle
  * @extends {Component}
  */
