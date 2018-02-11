@@ -1,14 +1,12 @@
 {
-  "name": "content-shell",
+  "name": "app-shell-placeholder",
   "version": "0.1.0",
-  "description": "Shell for the content.",
-  "main": "dist/content-shell.cjs.js",
-  "module": "dist/content-shell.esm.js",
-  "browser": "dist/content-shell.umd.js",
+  "description": "App shell content placeholder.",
+  "main": "dist/app-shell-placeholder.cjs.js",
+  "module": "dist/app-shell-placeholder.esm.js",
+  "browser": "dist/app-shell-placeholder.umd.js",
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

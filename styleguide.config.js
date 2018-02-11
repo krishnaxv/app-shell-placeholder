@@ -1,5 +1,8 @@
 module.exports = {
+  title: 'App Shell Placeholder',
   components: 'src/**/[A-Z]*.js',
+  showCode: true,
+  showUsage: true,
   webpackConfig: {
     module: {
       rules: [
