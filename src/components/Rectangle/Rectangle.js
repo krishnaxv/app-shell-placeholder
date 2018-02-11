@@ -1,29 +1,54 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
-const HEIGHT = 14;
-const WIDTH = '100%';
-const UNIT = 'px';
-
+// Animation
 const flash = keyframes`
   0% {
     background-position: 20% 0
   }
-
   100% {
     background-position: -100% 0
   }
 `;
 
+// Rectangle wrapper
 const Wrapper = styled.div`
-  width: ${props => `${props.width}${props.unit || UNIT}` || WIDTH};
-  height: ${props => props.height || HEIGHT}px;
-  background: #eee;
-  background: linear-gradient(to right, #eee 8%, #ddd 32%, #eee 48%);
+  width: ${props => props.width};
+  height: ${props => props.height};
+  background: ${({ backgroundColor, colorStop }) =>
+    `linear-gradient(to right, ${backgroundColor} 8%, ${colorStop} 32%, ${backgroundColor} 48%)`};
   background-size: 1000% 100%;
   animation: 1s linear infinite forwards ${flash};
 `;
 
-const Rectangle = props => <Wrapper {...props} />;
+/**
+ * Rectangle is a *primitive* component of content shell.
+ * @class Rectangle
+ * @extends {Component}
+ */
+class Rectangle extends Component {
+  static propTypes = {
+    /** Background color of rectangle. */
+    backgroundColor: PropTypes.string,
+    /** Color stop value of linear gradient. */
+    colorStop: PropTypes.string,
+    /** Height of rectangle. */
+    height: PropTypes.string,
+    /** Width of rectangle. */
+    width: PropTypes.string
+  };
+
+  static defaultProps = {
+    backgroundColor: '#eee',
+    colorStop: '#ddd',
+    height: '14px',
+    width: '100%'
+  };
+
+  render() {
+    return <Wrapper {...this.props} />;
+  }
+}
 
 export default Rectangle;
