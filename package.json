@@ -6,7 +6,9 @@
   "module": "dist/content-shell.esm.js",
   "browser": "dist/content-shell.umd.js",
   "license": "MIT",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -23,8 +25,13 @@
   },
   "scripts": {
     "dist": "rollup -c",
-    "prettier": "prettier --write 'src/**/*.js'",
+    "prettier": "prettier --write 'src/components/**/*.js'",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "styled-components": "^3.1.6"
   }
 }
