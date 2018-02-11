@@ -13,6 +13,14 @@ module.exports = {
               presets: ['env', 'react']
             }
           }
+        },
+        {
+          test: /\.(png|jpg|gif|svg)$/,
+          use: [
+            {
+              loader: 'file-loader'
+            }
+          ]
         }
       ]
     }

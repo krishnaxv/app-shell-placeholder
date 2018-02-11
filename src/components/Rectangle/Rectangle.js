@@ -1,8 +1,9 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const HEIGHT = 16;
+const HEIGHT = 14;
 const WIDTH = '100%';
+const UNIT = 'px';
 
 const flash = keyframes`
   0% {
@@ -15,7 +16,7 @@ const flash = keyframes`
 `;
 
 const Wrapper = styled.div`
-  width: ${props => `${props.width}px` || WIDTH};
+  width: ${props => `${props.width}${props.unit || UNIT}` || WIDTH};
   height: ${props => props.height || HEIGHT}px;
   background: #eee;
   background: linear-gradient(to right, #eee 8%, #ddd 32%, #eee 48%);
