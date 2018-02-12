@@ -29,7 +29,8 @@
     "dist": "rollup -c",
     "prettier": "prettier --write 'src/components/**/*.js'",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "github:deploy": "git subtree push --prefix styleguide origin gh-pages"
   },
   "dependencies": {
     "lodash": "^4.17.5",
