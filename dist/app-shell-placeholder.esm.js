@@ -443,13 +443,10 @@ Post.defaultProps = {
   row: 5
 };
 
-var img = new Image();img.src = 'data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4KICAgIDxwYXRoIGQ9Ik0yMSAxOVY1YzAtMS4xLS45LTItMi0ySDVjLTEuMSAwLTIgLjktMiAydjE0YzAgMS4xLjkgMiAyIDJoMTRjMS4xIDAgMi0uOSAyLTJ6TTguNSAxMy41bDIuNSAzLjAxTDE0LjUgMTJsNC41IDZINWwzLjUtNC41eiIvPgo8L3N2Zz4=';
-
 var _templateObject$5 = taggedTemplateLiteral([''], ['']);
 var _templateObject2$4 = taggedTemplateLiteral(['\n  margin-bottom: 16px;\n'], ['\n  margin-bottom: 16px;\n']);
-var _templateObject3 = taggedTemplateLiteral(['\n  margin-bottom: 16px;\n  text-align: center;\n'], ['\n  margin-bottom: 16px;\n  text-align: center;\n']);
-var _templateObject4 = taggedTemplateLiteral(['\n  width: 96px;\n  height: 96px;\n'], ['\n  width: 96px;\n  height: 96px;\n']);
-var _templateObject5 = taggedTemplateLiteral(['\n  width: 100%;\n'], ['\n  width: 100%;\n']);
+var _templateObject3 = taggedTemplateLiteral(['\n  display: flex;\n  justify-content: center;\n  margin-bottom: 16px;\n'], ['\n  display: flex;\n  justify-content: center;\n  margin-bottom: 16px;\n']);
+var _templateObject4 = taggedTemplateLiteral(['\n  width: 100%;\n'], ['\n  width: 100%;\n']);
 
 // Building blocks for Blog
 // Blog wrapper
@@ -461,11 +458,8 @@ var StyledText = styled(Text)(_templateObject2$4);
 // Blog image wrapper
 var ImageWrapper = styled.div(_templateObject3);
 
-// Blog image
-var Image$1 = styled.img(_templateObject4);
-
 // Article
-var Article = styled.article(_templateObject5);
+var Article = styled.article(_templateObject4);
 
 // Empty paragraph
 var EmptyParagraph = styled.p(_templateObject$5);
@@ -502,7 +496,7 @@ var Blog = function (_Component) {
         React.createElement(
           ImageWrapper,
           null,
-          React.createElement(Image$1, { src: img })
+          React.createElement(Square, { length: 128 })
         ),
         React.createElement(
           Article,

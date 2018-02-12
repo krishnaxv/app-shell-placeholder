@@ -7,7 +7,9 @@
   "browser": "dist/app-shell-placeholder.umd.js",
   "author": "krishnaxv",
   "license": "MIT",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -21,7 +23,6 @@
     "react-styleguidist": "^6.2.3",
     "rollup": "^0.55.5",
     "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-image": "^1.0.2",
     "rollup-plugin-node-resolve": "^3.0.2",
     "rollup-plugin-uglify": "^3.0.0",
     "webpack": "^3.11.0"

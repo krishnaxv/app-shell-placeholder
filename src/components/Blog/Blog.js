@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 // Building blocks for Blog
 import Text from '../Text';
+import Square from '../Square';
 import Paragraph from '../Paragraph';
-import photoIcon from '../../assets/images/ic_photo_black_24px.svg';
 
 // Blog wrapper
 const Wrapper = styled.div``;
@@ -17,14 +17,9 @@ const StyledText = styled(Text)`
 
 // Blog image wrapper
 const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
   margin-bottom: 16px;
-  text-align: center;
-`;
-
-// Blog image
-const Image = styled.img`
-  width: 96px;
-  height: 96px;
 `;
 
 // Article
@@ -72,7 +67,7 @@ class Blog extends Component {
       <Wrapper>
         <StyledText {...rest} height={titleHeight} width={titleWidth} />
         <ImageWrapper>
-          <Image src={photoIcon} />
+          <Square length={128} />
         </ImageWrapper>
         <Article>
           <Paragraph {...rest} height={height} row={row} />
