@@ -5,6 +5,7 @@
   "main": "dist/app-shell-placeholder.cjs.js",
   "module": "dist/app-shell-placeholder.esm.js",
   "browser": "dist/app-shell-placeholder.umd.js",
+  "author": "krishnaxv",
   "license": "MIT",
   "files": ["dist"],
   "devDependencies": {
