@@ -12,8 +12,8 @@ Customize it using built-in props.
 
 ```jsx
 <Rectangle
-  backgroundColor="#99f7ff"
-  colorStop="#e5fdff"
+  backgroundColor="#36393e"
+  colorStop="#e9e7e7"
   width="90%"
   height="24px"
 />

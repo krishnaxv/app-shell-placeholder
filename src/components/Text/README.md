@@ -11,5 +11,5 @@ Basic usage.
 Customize it using built-in props.
 
 ```jsx
-<Text backgroundColor="#99f7ff" colorStop="#e5fdff" width="90%" height="16px" />
+<Text backgroundColor="#36393e" colorStop="#e9e7e7" width="90%" height="16px" />
 ```

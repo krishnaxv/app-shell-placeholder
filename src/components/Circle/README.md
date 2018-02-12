@@ -11,5 +11,5 @@ Basic usage.
 Customize it using built-in props.
 
 ```jsx
-<Circle backgroundColor="#99f7ff" colorStop="#e5fdff" radius={128} />
+<Circle backgroundColor="#36393e" colorStop="#e9e7e7" radius={128} />
 ```

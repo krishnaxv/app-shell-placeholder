@@ -12,8 +12,8 @@ Customize it using built-in props.
 
 ```jsx
 <Post
-  backgroundColor="#99f7ff"
-  colorStop="#e5fdff"
+  backgroundColor="#36393e"
+  colorStop="#e9e7e7"
   height="16px"
   radius={80}
   row={7}
