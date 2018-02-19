@@ -67,7 +67,7 @@ class Blog extends Component {
       <Wrapper>
         <StyledText {...rest} height={titleHeight} width={titleWidth} />
         <ImageWrapper>
-          <Square length={128} />
+          <Square {...rest} length={128} />
         </ImageWrapper>
         <Article>
           <Paragraph {...rest} height={height} row={row} />
