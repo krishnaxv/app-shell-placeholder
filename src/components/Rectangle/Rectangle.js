@@ -5,10 +5,10 @@ import styled, { keyframes } from 'styled-components';
 // Animation
 const flash = keyframes`
   0% {
-    background-position: 20% 0
+    background-position: 50% 0;
   }
   100% {
-    background-position: -100% 0
+    background-position: -50% 0;
   }
 `;
 
@@ -17,9 +17,9 @@ const Wrapper = styled.div`
   width: ${props => props.width};
   height: ${props => props.height};
   background: ${({ backgroundColor, colorStop }) =>
-    `linear-gradient(to right, ${backgroundColor} 8%, ${colorStop} 32%, ${backgroundColor} 48%)`};
+    `linear-gradient(to right, ${backgroundColor} 8%, ${colorStop} 18%, ${backgroundColor} 33%)`};
   background-size: 1000% 100%;
-  animation: 1s linear infinite forwards ${flash};
+  animation: 1s linear 0s infinite forwards normal ${flash};
 `;
 
 /**
