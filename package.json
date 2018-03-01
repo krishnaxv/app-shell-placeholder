@@ -1,6 +1,6 @@
 {
   "name": "app-shell-placeholder",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "App shell content placeholder.",
   "main": "dist/app-shell-placeholder.cjs.js",
   "module": "dist/app-shell-placeholder.esm.js",
