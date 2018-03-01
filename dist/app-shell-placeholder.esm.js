@@ -109,8 +109,8 @@ var taggedTemplateLiteral = function (strings, raw) {
   }));
 };
 
-var _templateObject = taggedTemplateLiteral(['\n  0% {\n    background-position: 20% 0\n  }\n  100% {\n    background-position: -100% 0\n  }\n'], ['\n  0% {\n    background-position: 20% 0\n  }\n  100% {\n    background-position: -100% 0\n  }\n']);
-var _templateObject2 = taggedTemplateLiteral(['\n  width: ', 'px;\n  min-width: ', 'px;\n  height: ', 'px;\n  border-radius: 50%;\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear infinite forwards ', ';\n'], ['\n  width: ', 'px;\n  min-width: ', 'px;\n  height: ', 'px;\n  border-radius: 50%;\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear infinite forwards ', ';\n']);
+var _templateObject = taggedTemplateLiteral(['\n  0% {\n    background-position: 50% 0\n  }\n  100% {\n    background-position: -50% 0\n  }\n'], ['\n  0% {\n    background-position: 50% 0\n  }\n  100% {\n    background-position: -50% 0\n  }\n']);
+var _templateObject2 = taggedTemplateLiteral(['\n  width: ', 'px;\n  min-width: ', 'px;\n  height: ', 'px;\n  border-radius: 50%;\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear 0s infinite forwards ', ';\n'], ['\n  width: ', 'px;\n  min-width: ', 'px;\n  height: ', 'px;\n  border-radius: 50%;\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear 0s infinite forwards ', ';\n']);
 
 // Animation
 var flash = keyframes(_templateObject);
@@ -125,7 +125,7 @@ var Wrapper = styled.div(_templateObject2, function (props) {
 }, function (_ref) {
   var backgroundColor = _ref.backgroundColor,
       colorStop = _ref.colorStop;
-  return 'linear-gradient(to right, ' + backgroundColor + ' 8%, ' + colorStop + ' 32%, ' + backgroundColor + ' 48%)';
+  return 'linear-gradient(to right, ' + backgroundColor + ' 8%, ' + colorStop + ' 18%, ' + backgroundColor + ' 33%)';
 }, flash);
 
 /**
@@ -165,8 +165,8 @@ Circle.defaultProps = {
   radius: 64
 };
 
-var _templateObject$1 = taggedTemplateLiteral(['\n  0% {\n    background-position: 20% 0\n  }\n  100% {\n    background-position: -100% 0\n  }\n'], ['\n  0% {\n    background-position: 20% 0\n  }\n  100% {\n    background-position: -100% 0\n  }\n']);
-var _templateObject2$1 = taggedTemplateLiteral(['\n  width: ', ';\n  height: ', ';\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear infinite forwards ', ';\n'], ['\n  width: ', ';\n  height: ', ';\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear infinite forwards ', ';\n']);
+var _templateObject$1 = taggedTemplateLiteral(['\n  0% {\n    background-position: 50% 0;\n  }\n  100% {\n    background-position: -50% 0;\n  }\n'], ['\n  0% {\n    background-position: 50% 0;\n  }\n  100% {\n    background-position: -50% 0;\n  }\n']);
+var _templateObject2$1 = taggedTemplateLiteral(['\n  width: ', ';\n  height: ', ';\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear 0s infinite forwards normal ', ';\n'], ['\n  width: ', ';\n  height: ', ';\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear 0s infinite forwards normal ', ';\n']);
 
 // Animation
 var flash$1 = keyframes(_templateObject$1);
@@ -179,7 +179,7 @@ var Wrapper$1 = styled.div(_templateObject2$1, function (props) {
 }, function (_ref) {
   var backgroundColor = _ref.backgroundColor,
       colorStop = _ref.colorStop;
-  return 'linear-gradient(to right, ' + backgroundColor + ' 8%, ' + colorStop + ' 32%, ' + backgroundColor + ' 48%)';
+  return 'linear-gradient(to right, ' + backgroundColor + ' 8%, ' + colorStop + ' 18%, ' + backgroundColor + ' 33%)';
 }, flash$1);
 
 /**
@@ -222,8 +222,8 @@ Rectangle.defaultProps = {
   width: '100%'
 };
 
-var _templateObject$2 = taggedTemplateLiteral(['\n  0% {\n    background-position: 20% 0\n  }\n  100% {\n    background-position: -100% 0\n  }\n'], ['\n  0% {\n    background-position: 20% 0\n  }\n  100% {\n    background-position: -100% 0\n  }\n']);
-var _templateObject2$2 = taggedTemplateLiteral(['\n  width: ', 'px;\n  min-width: ', 'px;\n  height: ', 'px;\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear infinite forwards ', ';\n'], ['\n  width: ', 'px;\n  min-width: ', 'px;\n  height: ', 'px;\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear infinite forwards ', ';\n']);
+var _templateObject$2 = taggedTemplateLiteral(['\n  0% {\n    background-position: 50% 0\n  }\n  100% {\n    background-position: -50% 0\n  }\n'], ['\n  0% {\n    background-position: 50% 0\n  }\n  100% {\n    background-position: -50% 0\n  }\n']);
+var _templateObject2$2 = taggedTemplateLiteral(['\n  width: ', 'px;\n  min-width: ', 'px;\n  height: ', 'px;\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear 0s infinite forwards ', ';\n'], ['\n  width: ', 'px;\n  min-width: ', 'px;\n  height: ', 'px;\n  background: ', ';\n  background-size: 1000% 100%;\n  animation: 1s linear 0s infinite forwards ', ';\n']);
 
 // Animation
 var flash$2 = keyframes(_templateObject$2);
@@ -238,7 +238,7 @@ var Wrapper$2 = styled.div(_templateObject2$2, function (props) {
 }, function (_ref) {
   var backgroundColor = _ref.backgroundColor,
       colorStop = _ref.colorStop;
-  return 'linear-gradient(to right, ' + backgroundColor + ' 8%, ' + colorStop + ' 32%, ' + backgroundColor + ' 48%)';
+  return 'linear-gradient(to right, ' + backgroundColor + ' 8%, ' + colorStop + ' 18%, ' + backgroundColor + ' 33%)';
 }, flash$2);
 
 /**
@@ -496,7 +496,7 @@ var Blog = function (_Component) {
         React.createElement(
           ImageWrapper,
           null,
-          React.createElement(Square, { length: 128 })
+          React.createElement(Square, _extends({}, rest, { length: 128 }))
         ),
         React.createElement(
           Article,
