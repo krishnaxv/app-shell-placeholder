@@ -1,13 +1,15 @@
 {
   "name": "app-shell-placeholder",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "App shell content placeholder.",
   "main": "dist/app-shell-placeholder.cjs.js",
   "module": "dist/app-shell-placeholder.esm.js",
   "browser": "dist/app-shell-placeholder.umd.js",
   "author": "krishnaxv",
   "license": "MIT",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
