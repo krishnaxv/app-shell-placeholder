@@ -23,6 +23,8 @@ const CircleWrapper = styled(Circle)`
  */
 class Post extends Component {
   static propTypes = {
+    /** Background animation. */
+    animation: PropTypes.bool,
     /** Background color of Post. */
     backgroundColor: PropTypes.string,
     /** Color stop value of linear gradient. */
@@ -36,6 +38,7 @@ class Post extends Component {
   };
 
   static defaultProps = {
+    animation: true,
     backgroundColor: '#eee',
     colorStop: '#ddd',
     height: '14px',

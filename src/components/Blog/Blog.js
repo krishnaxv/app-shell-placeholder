@@ -37,6 +37,8 @@ const EmptyParagraph = styled.p``;
  */
 class Blog extends Component {
   static propTypes = {
+    /** Background animation. */
+    animation: PropTypes.bool,
     /** Background color of title/paragraph's row. */
     backgroundColor: PropTypes.string,
     /** Color stop value of linear gradient. */
@@ -52,6 +54,7 @@ class Blog extends Component {
   };
 
   static defaultProps = {
+    animation: true,
     backgroundColor: '#eee',
     colorStop: '#ddd',
     height: '14px',

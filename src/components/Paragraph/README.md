@@ -12,6 +12,7 @@ Customize it using built-in props.
 
 ```jsx
 <Paragraph
+  animation={false}
   backgroundColor="#36393e"
   colorStop="#e9e7e7"
   height="16px"

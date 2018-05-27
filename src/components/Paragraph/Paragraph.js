@@ -22,6 +22,8 @@ const Wrapper = styled.div`
  */
 class Paragraph extends Component {
   static propTypes = {
+    /** Background animation. */
+    animation: PropTypes.bool,
     /** Background color of paragraph's row. */
     backgroundColor: PropTypes.string,
     /** Color stop value of linear gradient. */
@@ -33,6 +35,7 @@ class Paragraph extends Component {
   };
 
   static defaultProps = {
+    animation: true,
     backgroundColor: '#eee',
     colorStop: '#ddd',
     height: '14px',
