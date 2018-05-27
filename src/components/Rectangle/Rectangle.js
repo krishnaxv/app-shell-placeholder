@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 // Animation
 const flash = keyframes`
@@ -12,14 +12,22 @@ const flash = keyframes`
   }
 `;
 
-// Rectangle wrapper
-const Wrapper = styled.div`
-  width: ${props => props.width};
-  height: ${props => props.height};
+// Animation mixin
+const animationMixin = css`
   background: ${({ backgroundColor, colorStop }) =>
     `linear-gradient(to right, ${backgroundColor} 8%, ${colorStop} 18%, ${backgroundColor} 33%)`};
   background-size: 1000% 100%;
   animation: 1s linear 0s infinite forwards normal ${flash};
+`;
+
+// Rectangle wrapper
+const Wrapper = styled.div`
+  width: ${props => props.width};
+  height: ${props => props.height};
+  ${props =>
+    props.animation
+      ? animationMixin
+      : `background-color: ${props.backgroundColor};`};
 `;
 
 /**
@@ -29,6 +37,8 @@ const Wrapper = styled.div`
  */
 class Rectangle extends Component {
   static propTypes = {
+    /** Background animation. */
+    animation: PropTypes.bool,
     /** Background color of rectangle. */
     backgroundColor: PropTypes.string,
     /** Color stop value of linear gradient. */
@@ -40,6 +50,7 @@ class Rectangle extends Component {
   };
 
   static defaultProps = {
+    animation: true,
     backgroundColor: '#eee',
     colorStop: '#ddd',
     height: '14px',
